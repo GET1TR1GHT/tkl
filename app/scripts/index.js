@@ -75,6 +75,7 @@ function huadongnew(ll) {
   // 在滑动的一定范围内，才切换图片
   var offset = 50;
   // 注册滑动事件
+
   rollthing.on('touchstart', function (e) {
     // 手指触摸开始时记录一下手指所在的坐标x
     startX = e.originalEvent.touches[0].clientX;
@@ -91,14 +92,14 @@ function huadongnew(ll) {
     //比较endX与startX的大小，并获取每次运动的距离，当距离大于一定值时认为是有方向的变化
     var distance = Math.abs(startX - endX);
     if (distance > offset) {
-      if ($('#storesdetails').offset().left - 15 == -345) {
+      if ($('.storedetail').offset().left - 15 == -($('.shownews').width())) {
         //说明有方向的变化
         //根据获得的方向 判断是上一张还是下一张出现
         $(this).carousel(startX > endX ? shownew(2,true) : shownew(0,false));
-      } else if ($('#storesdetails').offset().left - 15 == -690) {
+      } else if ($('.storedetail').offset().left - 15 == -($('.shownews').width()*2)) {
         $(this).carousel(startX > endX ?  clearInterval(time) : shownew(1,false));
       } else {
-        $(this).carousel(startX > endX ? shownew(1,true) : shownew(0,true));
+        $(this).carousel(startX > endX ? shownew(1,true) : clearInterval(time));
       }
 
       var count = 0;
