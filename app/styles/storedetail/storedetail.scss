@@ -1,0 +1,160 @@
+.header {
+  .backhome {
+    float: left;
+    width: 10%;
+    line-height: 30px;
+    height: 30px;
+    position: relative;
+    img {
+      height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+  .options {
+    float: right;
+    width: 90%;
+    height: 30px;
+    ul {
+      height: 30px;
+      line-height: 30px;
+      li {
+        float: left;
+        width: 25%;
+        position: relative;
+        padding-left: 23px;
+        p {
+          font-size: 15px;
+          font-weight: 200;
+          color: #dddddd;
+        }
+        img {
+          height: 7px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.storesdetails {
+  .datails {
+    .datailsul {
+      li {
+        background-color: #fff;
+        display: block;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        height: 114px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        .detailleft {
+          float: left;
+          width: 70%;
+          h1 {
+            font-size: 22px;
+            font-weight: 200;
+            margin-bottom: 18px;
+            text-transform: capitalize;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 95%;
+            text-overflow: ellipsis;
+            height: 24px;
+          }
+          h2 {
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 18px;
+          }
+          .detailleftbottom {
+            height: 17px;
+            p {
+              font-size: 12px;
+              font-weight: 200;
+              float: left;
+              line-height: 17px;
+              margin-right: 5px;
+              width: 125px;
+            }
+            img {
+              float: left;
+              height: 12px;
+            }
+            .yellowloacl {
+              float: left;
+              width: 50px;
+              border: 1px solid #D8BB81;
+              border-radius: 2px;
+              height: 17px;
+              margin-right: 10px;
+              padding: 2px 5px;
+              h3 {
+                font-size: 12px;
+                font-weight: 200;
+                float: right;
+                color: #D8BB81;
+              }
+            }
+            .good {
+              float: left;
+              width: 50px;
+              border-radius: 2px;
+              background-color: #D8BB81;
+              height: 17px;
+              padding: 2px 5px;
+              h3 {
+                font-size: 12px;
+                font-weight: 200;
+                float: right;
+                color: #5A3B1B;
+              }
+            }
+          }
+        }
+        .detailright {
+          width: 30%;
+          float: right;
+          position: relative;
+          height: 89px;
+          img {
+            width: 90px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            //float: right;
+            margin: auto;
+            border-radius: 4px;
+          }
+        }
+        .vipsign {
+          width: 0;
+          height: 0;
+          border-top: 50px solid rgba(216, 187, 129, 0.77);
+          border-left: 50px solid transparent;
+          position: absolute;
+          right: 0;
+          top: 0;
+          img {
+            position: absolute;
+            right: 3px;
+            width: 22px;
+            float: right;
+            top: -44px;
+            z-index: 888;
+          }
+        }
+      }
+    }
+  }
+}

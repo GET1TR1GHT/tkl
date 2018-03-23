@@ -54,7 +54,7 @@
     <div class="navigation">
       <div class="container-fluid">
         <ul class="navigationbox">
-          <li class="food">
+          <li class="food" onclick="javascrtpt:window.location.href='storedetail.html'">
             <img src="images/icon/food.png"/>
           </li>
           <li class="shop">
@@ -78,15 +78,15 @@
         </div>
         <div class="hotdetails">
           <div class="hotboxdiv">
-            <ul class="hotbox">
+            <ul class="hotbox" id="hotstoreul">
               <li>
                 <div class="storelogo">
-                  <img src="images/icon/fangsuo.png"/>
+                  <img src="" >
                   <div class="lineborder">
                   </div>
                 </div>
-                <h1>方所书店</h1>
-                <p> 年度最佳场所设计奖</p>
+                <h1 class="hotstorename">方所书店</h1>
+                <p class="hotstorespecil"> 年度最佳场所设计奖</p>
               </li>
               <li>
                 <div class="storelogo">
@@ -94,8 +94,8 @@
                   <div class="lineborder">
                   </div>
                 </div>
-                <h1>LINE FRIENDS</h1>
-                <p> 卡通超萌拍照圣地</p>
+                <h1 class="hotstorename">LINE FRIENDS</h1>
+                <p class="hotstorespecil"> 卡通超萌拍照圣地</p>
               </li>
               <li>
                 <div class="storelogo">
@@ -103,8 +103,8 @@
                   <div class="lineborder">
                   </div>
                 </div>
-                <h1>MUJI 无印良品</h1>
-                <p> 全球最大MUJI旗舰店</p>
+                <h1 class="hotstorename">MUJI 无印良品</h1>
+                <p class="hotstorespecil"> 全球最大MUJI旗舰店</p>
               </li>
               <li>
                 <div class="storelogo">
@@ -112,11 +112,11 @@
                   <div class="lineborder">
                   </div>
                 </div>
-                <h1>MUJI 无印良品</h1>
-                <p> 全球最大MUJI旗舰店</p>
+                <h1 class="hotstorename">MUJI 无印良品</h1>
+                <p class="hotstorespecil"> 全球最大MUJI旗舰店</p>
               </li>
               <li class="more">
-                <div class="storelogo" id="more">
+                <div class="storelogo1" id="more">
                   <img src="images/icon/tklmore.png" class="tklmore"/>
                 </div>
                 <h2>查看全部</h2>
@@ -147,10 +147,10 @@
             </div>
           </div>
           <div class="storeschar">
-            <h1>LINE FRIENDS </h1>
+            <h1 class="newstorename">LINE FRIENDS </h1>
             <div class="location">
               <img src="images/icon/location.png">
-              <p>负一楼M层M003</p>
+              <p class="newstoreads">负一楼M层M003</p>
             </div>
           </div>
         </div>
@@ -162,8 +162,9 @@
         <div class="headline">
           <div class="headlinebox"></div>
           <p>预付卡店铺</p>
-          <a href="###">查看全部
-            <img src="images/icon/right.png" height="200" width="200"/></a>
+          <a href="###">
+            <h4>查看全部</h4>
+            <img src="images/icon/right.png" /></a>
         </div>
         <div class="prepayimg">
           <img src="images/image/yufu.png"/>
@@ -176,8 +177,9 @@
         <div class="headline">
           <div class="headlinebox"></div>
           <p>"优悦里"会员</p>
-          <a href="###">查看全部
-            <img src="images/icon/right.png" height="200" width="200"/></a>
+          <a href="###">
+            <h4>查看全部</h4>
+            <img src="images/icon/right.png" /></a>
         </div>
         <div class="prepayimg">
           <img src="images/image/vip.jpeg"/>
@@ -218,7 +220,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/index.js"></script>
+    <script src="scripts/port.js"></script>
     <!-- endbuild -->
   </body>
 </html>
