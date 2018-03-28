@@ -6,7 +6,9 @@ $icon-font-path: '../fonts/';
 
 @import "index/index.scss";
 
-@import "storedetail/storedetail";
+@import "storedetail/storedetail.scss";
+
+@import "onestoredetail/onestoredetail.scss";
 
 $img-path: '../';
 .navigation {
