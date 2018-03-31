@@ -64,49 +64,4 @@ $(document).ready(function () {
             console.log('调用banner失败');
         }
     })
-    $.ajax({
-        method: 'get',
-        url: 'http://idp.dev2.wizarcan.com/client/getPoiByWhere.shtml?buildingId=33',
-        buildingId: 'true',
-        dataType: 'json',
-        success: function (res) {
-            var index2 = 0;
-            var guu = [];
-            $.each(res.data, function (a, b) {
-                guu.push(res.data[a].typeIds);
-                if (typeof(guu[a]) != 'undefined') {
-                    if (guu[a].indexOf('225') != -1) {
-                        for (var i = 0; i < index2 + 1; i++) {
-                            $('.datailsul').append('<li class="container" onclick="javascrtpt:window.location.href=\'onestoredetail.html\'">' +
-                                '                    <div class="detailleft">' +
-                                '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
-                                '                        <h2>' + (res.data[a].discountInfo == '' ? '暂无折扣优惠' : res.data[a].discountInfo) + '</h2>' +
-                                '                        <div class="detailleftbottom">' +
-                                '                            <p>' + res.data[a].detail.substr(0, 5).replace('及', '') + '  ' + ((res.data[a].serviceLabels[3]) == '0' ? '' : '预付卡店铺') + '</p>' +
-                                '                            <div class="yellowloacl">' +
-                                '                                <img src="images/icon/loaclyellow.png"/>' +
-                                '                                <h3>' + (((res.data[a].mapArea[0]) == 'M') ? 'M' : 'L' + res.data[a].mapArea[1]) + '层</h3>' +
-                                '                            </div>' +
-                                '                            <div class="good">' +
-                                '                                <img src="images/icon/good.png"/>' +
-                                '                                <h3>123</h3>' +
-                                '                            </div>' +
-                                '                        </div>' +
-                                '                    </div>' +
-                                '                    <div class="detailright">' +
-                                '                        <img src="' + (typeof(res.data[a].icon) == 'undefined' ? 'images/icon/Rectangle.png' : 'http://idp.dev2.wizarcan.com/' + res.data[a].icon) + '"/>' +
-                                '                    </div>' +
-                                ((res.data[a].serviceLabels[2]) == '0' ? '' : '<div class="vipsign" >\n' +
-                                    '                        <img src="images/icon/vipicon.png"/>\n' +
-                                    '                    </div>') +
-                                '                </li>')
-                        }
-                    }
-                }
-            })
-        },
-        error: function () {
-            console.log('调用详情店铺失败');
-        }
-    })
 })

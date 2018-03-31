@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>taigulihome</title>
+    <title>成都远洋太古里</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -31,48 +31,93 @@
 <div class="header">
     <div class="container-fluid">
         <div class="backhome">
-            <img src="images/icon/left.png" onclick="javascrtpt:window.location.href='index.html'" />
+            <img src="images/icon/left.png" onclick="javascrtpt:history.back(-1)"/>
         </div>
         <div class="options">
-            <ul>
-                <li><p>楼层</p><img src="images/icon/down.png"/></li>
-                <li><p>美食</p><img src="images/icon/down.png"/></li>
-                <li><p>排序</p><img src="images/icon/down.png"/></li>
-                <li><p>筛选</p><img src="images/icon/down.png"/></li>
+            <ul class="uloptions">
+                <li class="primeoption">
+                    <div class="dropdown"><p class="heighligth">楼层</p><img class="changeimg" src="images/icon/down.png"/></div>
+                    <ul class="restul">
+                        <li class="restli">M层</li>
+                        <li class="restli">L1</li>
+                        <li class="restli">L2</li>
+                    </ul>
+                </li>
+                <li class="primeoption">
+                    <div class="dropdown" id="changetype"><p class="heighligth">美食</p><img class="changeimg" src="images/icon/down.png"/></div>
+                    <ul class="restul" id="changetypeul">
+                        <li class="restli foodli">中餐</li>
+                        <li class="restli foodli">西餐</li>
+                        <li class="restli foodli">咖啡、饮品及烘焙</li>
+                        <li class="restli foodli">轻便美食</li>
+                        <li class="restli foodli">亚洲美食</li>
+                        <li class="restli foodli">甜点/饮品</li>
+                        <li class="restli shopli">女装</li>
+                        <li class="restli shopli">男装</li>
+                        <li class="restli shopli">休闲服饰/运动产品</li>
+                        <li class="restli shopli">珠宝钟表/饰品</li>
+                        <li class="restli shopli">工艺/家具/礼品</li>
+                        <li class="restli shopli">电子产品</li>
+                        <li class="restli shopli">鞋包皮具</li>
+                        <li class="restli funli">主力店</li>
+                        <li class="restli funli">护理美容</li>
+                        <li class="restli funli">书店</li>
+                        <li class="restli funli">电影院</li>
+                        <li class="restli serveli">卫生间</li>
+                        <li class="restli serveli">客服中心</li>
+                    </ul>
+                </li>
+                <li class="primeoption">
+                    <div class="dropdown"><p class="heighligth">排序</p><img class="changeimg" src="images/icon/down.png"/></div>
+                    <ul class="restul">
+                        <li class="restli">点赞最多</li>
+                        <li class="restli">搜索最多</li>
+                        <li class="restli">人气最高</li>
+                    </ul>
+                </li>
+                <li class="primeoption">
+                    <div class="dropdown"><p class="heighligth">筛选</p><img class="changeimg" src="images/icon/down.png"/></div>
+                    <ul class="restul">
+                        <li class="restli">店铺活动</li>
+                        <li class="restli">会员优惠</li>
+                        <li class="restli">预付卡</li>
+                    </ul>
+                </li>
+                <div class="greyblock"></div>
             </ul>
         </div>
     </div>
 </div>
 
 <div class="storesdetails">
-        <div class="datails">
-            <ul class="datailsul">
-                <!--<li class="container">-->
-                    <!--<div class="detailleft">-->
-                        <!--<h1>line Friends</h1>-->
-                        <!--<h2>每逢周一，买任意一杯咖啡送一杯</h2>-->
-                        <!--<div class="detailleftbottom">-->
-                            <!--<p>轻便美食 预付卡店铺</p>-->
-                            <!--<div class="yellowloacl">-->
-                                <!--<img src="images/icon/loaclyellow.png"/>-->
-                                <!--<h3>L1层</h3>-->
-                            <!--</div>-->
-                            <!--<div class="good">-->
-                                <!--<img src="images/icon/good.png"/>-->
-                                <!--<h3>123</h3>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="detailright">-->
-                        <!--<img src="images/icon/Rectangle.png"/>-->
-                    <!--</div>-->
+    <div class="datails">
+        <ul class="datailsul">
+            <!--<li class="container">-->
+            <!--<div class="detailleft">-->
+            <!--<h1>line Friends</h1>-->
+            <!--<h2>每逢周一，买任意一杯咖啡送一杯</h2>-->
+            <!--<div class="detailleftbottom">-->
+            <!--<p>轻便美食 预付卡店铺</p>-->
+            <!--<div class="yellowloacl">-->
+            <!--<img src="images/icon/loaclyellow.png"/>-->
+            <!--<h3>L1层</h3>-->
+            <!--</div>-->
+            <!--<div class="good">-->
+            <!--<img src="images/icon/good.png"/>-->
+            <!--<h3>123</h3>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="detailright">-->
+            <!--<img src="images/icon/Rectangle.png"/>-->
+            <!--</div>-->
 
-                    <!--<div class="vipsign" >-->
-                        <!--<img src="images/icon/vipicon.png"/>-->
-                    <!--</div>-->
-                <!--</li>-->
-            </ul>
-        </div>
+            <!--<div class="vipsign" >-->
+            <!--<img src="images/icon/vipicon.png"/>-->
+            <!--</div>-->
+            <!--</li>-->
+        </ul>
+    </div>
 </div>
 <div class="navigationbar">
 

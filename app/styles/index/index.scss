@@ -10,7 +10,7 @@ body {
   width: 100%;
   z-index: 100000000;
   top: 0;
-  .logo {
+  .headerlogo {
     height: 30px;
     float: left;
     width: 15%;
@@ -18,10 +18,12 @@ body {
       height: 30px;
     }
   }
-  .search {
+  .searchdiv {
+    transition: width 1s;
     height: 30px;
     float: right;
     width: 85%;
+    position: relative;
     input {
       border: 0;
       border-radius: 4px;
@@ -32,9 +34,47 @@ body {
       line-height: 30px;
       font-weight: 200;
     }
+    .serchlogo{
+      position: absolute;
+      width: 19px;
+      right: 10px;
+      top: 5px;
+      display: none;
+    }
   }
 }
-
+.whiteblock{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+  z-index: 999999;
+  display: none;
+  h1{
+    font-size: 16px;
+    font-weight: 600;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+  }
+  ul{
+    width: 100%;
+    margin-bottom: 10px;
+    li{
+      width: 25%;
+      padding: 0 10px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 14px;
+      background-color: #e2e2e2;
+      border-radius: 5px;
+      font-weight: 400;
+    }
+  }
+}
 .banner {
   padding-top: 40px;
   width: 100%;

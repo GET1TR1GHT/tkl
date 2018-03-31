@@ -29,13 +29,26 @@
 
     <div class="header">
       <div class="container">
-        <div class="logo"><img src="images/icon/tkllogo.png"/></div>
-        <div class="search">
-          <input type="text" placeholder="搜索店铺、公共设施">
+        <div class="headerlogo"><img src="images/icon/tkllogo.png"/></div>
+        <div class="searchdiv">
+          <input class="search" type="search" placeholder="搜索店铺、公共设施">
+          <img class="serchlogo" src="images/icon/search.png"/>
         </div>
       </div>
     </div>
 
+    <div class="whiteblock">
+      <div class="container">
+        <h1>最近搜索</h1>
+        <ul>
+          <li class="whiteli">星巴克</li>
+        </ul>
+        <h1>热门搜索</h1>
+        <ul>
+          <li class="whiteli">方所书店</li>
+        </ul>
+      </div>
+    </div>
     <div class="banner">
       <ul id="bannerimg">
         <li class="current" data-id="1"></li>
@@ -55,16 +68,16 @@
     <div class="navigation">
       <div class="container-fluid">
         <ul class="navigationbox">
-          <li class="food" onclick="javascrtpt:window.location.href='storedetail.html'">
+          <li class="food" onclick="moveto()">
             <img src="images/icon/food.png"/>
           </li>
-          <li class="shop">
+          <li class="shop" onclick="movetoshop()">
             <img src="images/icon/shop.png"/>
           </li>
-          <li class="fun">
+          <li class="fun" onclick="movetofun()">
             <img src="images/icon/fun.png"/>
           </li>
-          <li class="public">
+          <li class="public" onclick="movetoserve()">
             <img src="images/icon/public.png"/>
           </li>
         </ul>
