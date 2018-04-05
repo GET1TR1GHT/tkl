@@ -30,12 +30,24 @@
 <div class="header">
     <div class="container">
         <div class="leftlogo"><a onclick="javascript:history.back(-1)"><img src="images/icon/left.png"/></a></div>
-        <div class="search">
-            <input type="text" placeholder="搜索店铺、公共设施">
-        </div>
+        <form class="searchdiv" action="#">
+            <input class="search" type="search" placeholder="搜索店铺、公共设施" onsearch="search()">
+            <img class="serchlogo" src="images/icon/search.png"/>
+        </form>
     </div>
 </div>
-
+<div class="whiteblock">
+    <div class="container">
+        <h1>最近搜索</h1>
+        <ul>
+            <li class="whiteli">星巴克</li>
+        </ul>
+        <h1>热门搜索</h1>
+        <ul>
+            <li class="whiteli">方所书店</li>
+        </ul>
+    </div>
+</div>
 <div class="map">
 
 </div>
@@ -44,13 +56,15 @@
     <div class="container-fluid">
         <div class="storemessageprime">
             <div class="primeleft">
-                <div class="primelogo"></div>
+                <div class="primelogo">
+                    <img src="">
+                </div>
             </div>
             <div class="primeright">
                 <h1 class="primename">JOY BOX</h1>
                 <h2>轻便美食 预付卡店铺</h2>
-                <div class="messagerow"><img src="images/icon/giftsmall.png"/><h3>每逢周一，买任意一杯咖啡送一杯</h3></div>
-                <div class="messagerow"><img src="images/icon/vipsmall.png"/><h3>优悦里会员8.8折</h3></div>
+                <div class="messagerow"><img src="images/icon/giftsmall.png"/><h3 class="ativesin">每逢周一，买任意一杯咖啡送一杯</h3></div>
+                <div class="messagerow"><img src="images/icon/vipsmall.png"/><h3 class="vipin">优悦里会员8.8折</h3></div>
             </div>
         </div>
         <div class="storemessagerest">
@@ -60,7 +74,7 @@
             </div>
             <div class="restright">
                 <ul>
-                    <li><img src="images/icon/telsmall.png"/></li>
+                    <li><a class="telhref" ref=""><img src="images/icon/telsmall.png"/></a></li>
                     <li><img src="images/icon/sharesmall.png"/></li>
                     <li><img src="images/icon/goodsmall.png"/><h4>123</h4></li>
                     <li><img src="images/icon/cheapsmall.png"/></li>
@@ -75,7 +89,12 @@
 </div>
 
 <div class="navigationbar">
-
+    <ul>
+        <li><img src="images/icon/found.png"  class="found" onClick="location.href='index.html'"/><p >发现</p></li>
+        <li><img src="images/icon/classify.png"class="classify"/><p>分类</p></li>
+        <li><img src="images/icon/yellowgotogo.png" class="gotogo"/><p id="yellowchar">导航</p></li>
+        <li><img src="images/icon/park.png" class="park"/><p>停车</p></li>
+    </ul>
 </div>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

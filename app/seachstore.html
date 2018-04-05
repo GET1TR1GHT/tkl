@@ -29,58 +29,34 @@
 <![endif]-->
 
 <div class="header">
+    <div class="container">
+        <div class="leftlogo"><a onclick="location.href='index.html'"><img src="images/icon/left.png"/></a></div>
+        <form class="searchdiv" action="#">
+            <input class="search" type="search" placeholder="搜索店铺、公共设施" onsearch="search()" id="searchstorename">
+            <img class="serchlogo" src="images/icon/search.png" onclick="search()"/>
+        </form>
+    </div>
+</div>
+<div class="whiteblock">
+    <div class="container record">
+        <h1>最近搜索</h1>
+        <ul class="recordul">
+            <li class="whiteli">星巴克</li>
+        </ul>
+        <h1>热门搜索</h1>
+        <ul class="recordul">
+            <li class="whiteli">方所书店</li>
+        </ul>
+    </div>
+    <div class="container thinksearch">
+        <ul class="thinksearchul"></ul>
+    </div>
+</div>
+
+<div class="indexover" id="reminder">
     <div class="container-fluid">
-        <div class="backhome">
-            <img src="images/icon/left.png" onclick="javascrtpt:history.back(-1)"/>
-        </div>
-        <div class="options">
-            <ul class="uloptions">
-                <li class="primeoption">
-                    <div class="dropdown"><p class="heighligth">楼层</p><img class="changeimg" src="images/icon/down.png"/></div>
-                    <ul class="restul">
-                        <li class="restli">全部</li>
-                        <li class="restli">M层</li>
-                        <li class="restli">L1</li>
-                        <li class="restli">L2</li>
-                    </ul>
-                </li>
-                <li class="primeoption">
-                    <div class="dropdown" id="changetype"><p class="heighligth">美食</p><img class="changeimg" src="images/icon/down.png"/></div>
-                    <ul class="restul" id="changetypeul">
-                        <li class="restli">全部</li>
-                        <li class="restli foodli">中餐</li>
-                        <li class="restli foodli">西餐</li>
-                        <li class="restli foodli">咖啡、饮品及烘焙</li>
-                        <li class="restli foodli">轻便美食</li>
-                        <li class="restli foodli">亚洲美食</li>
-                        <li class="restli foodli">甜点/饮品</li>
-                        <li class="restli shopli">女装</li>
-                        <li class="restli shopli">男装</li>
-                        <li class="restli shopli">休闲服饰/运动产品</li>
-                        <li class="restli shopli">珠宝钟表/饰品</li>
-                        <li class="restli shopli">工艺/家具/礼品</li>
-                        <li class="restli shopli">电子产品</li>
-                        <li class="restli shopli">鞋包皮具</li>
-                        <li class="restli funli">主力店</li>
-                        <li class="restli funli">护理美容</li>
-                        <li class="restli funli">书店</li>
-                        <li class="restli funli">电影院</li>
-                        <li class="restli serveli">卫生间</li>
-                        <li class="restli serveli">客服中心</li>
-                    </ul>
-                </li>
-                <li class="primeoption">
-                    <div class="dropdown"><p class="heighligth">筛选</p><img class="changeimg" src="images/icon/down.png"/></div>
-                    <ul class="restul">
-                        <li class="restli">全部</li>
-                        <li class="restli">店铺活动</li>
-                        <li class="restli">会员优惠</li>
-                        <li class="restli">预付卡</li>
-                    </ul>
-                </li>
-                <div class="greyblock"></div>
-            </ul>
-        </div>
+        <div class="overname">未搜索到该结果</div>
+        <div class="line"></div>
     </div>
 </div>
 
@@ -116,10 +92,14 @@
 </div>
 <div class="navigationbar">
     <ul>
-        <li><img src="images/icon/yellowfound.png"  class="found"/><p id="yellowchar">发现</p></li>
-        <li><img src="images/icon/classify.png"class="classify"/><p>分类</p></li>
-        <li><img src="images/icon/gotogo.png" class="gotogo"/><p>导航</p></li>
-        <li><img src="images/icon/park.png" class="park"/><p>停车</p></li>
+        <li><img src="images/icon/yellowfound.png" class="found"/>
+            <p id="yellowchar">发现</p></li>
+        <li><img src="images/icon/classify.png" class="classify"/>
+            <p>分类</p></li>
+        <li><img src="images/icon/gotogo.png" class="gotogo"/>
+            <p>导航</p></li>
+        <li><img src="images/icon/park.png" class="park"/>
+            <p>停车</p></li>
     </ul>
 </div>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

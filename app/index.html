@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin">
     <title>成都远洋太古里</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -29,24 +30,26 @@
 
     <div class="header">
       <div class="container">
-        <div class="headerlogo"><img src="images/icon/tkllogo.png"/></div>
-        <div class="searchdiv">
-          <input class="search" type="search" placeholder="搜索店铺、公共设施">
-          <img class="serchlogo" src="images/icon/search.png"/>
-        </div>
+        <div class="headerlogo"><img class="imginlogo" src="images/icon/tkllogo.png"/></div>
+        <form class="searchdiv" action="#">
+          <input class="search" type="search" placeholder="搜索店铺、公共设施" onsearch="search()" id="searchstorename">
+          <img class="serchlogo" src="images/icon/search.png" onclick="search()"/>
+        </form>
       </div>
     </div>
 
     <div class="whiteblock">
-      <div class="container">
+      <div class="container record">
         <h1>最近搜索</h1>
-        <ul>
-          <li class="whiteli">星巴克</li>
+        <ul class="recordul">
+          <li class="whiteli" onclick="searchinbox()">星巴克</li>
         </ul>
         <h1>热门搜索</h1>
-        <ul>
-          <li class="whiteli">方所书店</li>
+        <ul class="recordul hotrecord">
         </ul>
+      </div>
+      <div class="container thinksearch">
+        <ul class="thinksearchul"></ul>
       </div>
     </div>
     <div class="banner">
@@ -89,9 +92,6 @@
         <div class="headline">
           <div class="headlinebox"></div>
           <p>人气店铺</p>
-          <a href="###">
-            <h4>查看全部</h4>
-          </a>
         </div>
         <div class="hotdetails">
           <div class="hotboxdiv">
@@ -103,7 +103,6 @@
                 <div class="lineborder">
                 </div>
                 <h1 class="hotstorename"> </h1>
-                <p class="hotstorespecil"> </p>
               </li>
               <li>
                 <div class="storelogo">
@@ -112,7 +111,6 @@
                 <div class="lineborder">
                 </div>
                 <h1 class="hotstorename"></h1>
-                <p class="hotstorespecil"> </p>
               </li>
               <li>
                 <div class="storelogo">
@@ -121,7 +119,6 @@
                 <div class="lineborder">
                 </div>
                 <h1 class="hotstorename"></h1>
-                <p class="hotstorespecil"> </p>
               </li>
               <li>
                 <div class="storelogo">
@@ -130,7 +127,6 @@
                 <div class="lineborder">
                 </div>
                 <h1 class="hotstorename"></h1>
-                <p class="hotstorespecil"> </p>
               </li>
               <li>
                 <div class="storelogo">
@@ -139,7 +135,46 @@
                 <div class="lineborder">
                 </div>
                 <h1 class="hotstorename"> </h1>
-                <p class="hotstorespecil">  </p>
+              </li>
+              <li>
+                <div class="storelogo">
+                  <img src=""/>
+                </div>
+                <div class="lineborder">
+                </div>
+                <h1 class="hotstorename"> </h1>
+              </li>
+              <li>
+                <div class="storelogo">
+                  <img src=""/>
+                </div>
+                <div class="lineborder">
+                </div>
+                <h1 class="hotstorename"> </h1>
+              </li>
+              <li>
+                <div class="storelogo">
+                  <img src=""/>
+                </div>
+                <div class="lineborder">
+                </div>
+                <h1 class="hotstorename"> </h1>
+              </li>
+              <li>
+                <div class="storelogo">
+                  <img src=""/>
+                </div>
+                <div class="lineborder">
+                </div>
+                <h1 class="hotstorename"> </h1>
+              </li>
+              <li>
+                <div class="storelogo">
+                  <img src=""/>
+                </div>
+                <div class="lineborder">
+                </div>
+                <h1 class="hotstorename"> </h1>
               </li>
             </ul>
           </div>
@@ -214,8 +249,14 @@
         <div class="line"></div>
       </div>
     </div>
-    <div class="navigationbar">
 
+    <div class="navigationbar">
+      <ul>
+        <li><img src="images/icon/yellowfound.png"  class="found"/><p id="yellowchar">首页</p></li>
+        <li><img src="images/icon/gotogo.png" class="gotogo"/><p>室内导航</p></li>
+        <li><img src="images/icon/park.png" class="park"/><p>反向寻车</p></li>
+        <li><img src="images/icon/classify.png"class="classify"/><p>业态分类</p></li>
+      </ul>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
