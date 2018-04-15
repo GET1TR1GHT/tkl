@@ -16,9 +16,9 @@ $(document).ready(function () {
                         'background': 'url(http://idp.dev2.wizarcan.com/' + ress[0] + ') no-repeat',
                         'background-size': '100% 100%',
                     }).attr('onclick', 'javascrtpt:window.location.href="' + res.data[0].url + '"');
-                    newstorename.html(res.data[0].brand.replace('#', '  '));
+                    newstorename.html(res.data[0].brand.replace('#', '  ')).attr('onclick', 'javascrtpt:window.location.href="' + ol[index1].url + '"');
                     newstoreads.html(res.data[0].address);
-                    $('.newstoretitle').html(res.data[0].newTitle1);
+                    $('.newstoretitle').html(res.data[0].newTitle1).attr('onclick', 'javascrtpt:window.location.href="' + ol[index1].url + '"');
                 }
             })
         },
@@ -38,6 +38,7 @@ $(document).ready(function () {
             $('#hotstoreul>li').each(function (a, b) {
                 hotstoreimg.eq(a).attr('src', 'http://idp.dev2.wizarcan.com' + res.data[a].icon);
                 hotstorename.eq(a).html(res.data[a].brand.replace('#', '  '));
+                $('#hotstoreul>li').eq(a).attr('onclick', 'javascrtpt:window.location.href="onestoredetail.html?storedesignation='+ res.data[a].brand +'"');
             })
         },
         error: function (res) {
@@ -56,7 +57,7 @@ $(document).ready(function () {
                     'background': 'url(http://idp.dev2.wizarcan.com/' + $bannerimg + ') no-repeat',
                     'background-size': '100% 100%',
                 }).attr('onclick', 'javascrtpt:window.location.href="' + res.data[a].url + '"');
-                $('.detail').eq(a).html(res.data[0].title);
+                $('.detail').eq(a).html(res.data[0].title).attr('onclick', 'javascrtpt:window.location.href="' + res.data[a].url + '"');
             })
         },
         error: function () {

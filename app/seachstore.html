@@ -30,7 +30,7 @@
 
 <div class="header">
     <div class="container">
-        <div class="leftlogo"><a onclick="location.href='index.html'"><img src="images/icon/left.png"/></a></div>
+        <div class="leftlogo"><a onclick="backto()"><img src="images/icon/left.png"/></a></div>
         <form class="searchdiv" action="#">
             <input class="search" type="search" placeholder="搜索店铺、公共设施" onsearch="search()" id="searchstorename">
             <img class="serchlogo" src="images/icon/search.png" onclick="search()"/>
@@ -41,11 +41,10 @@
     <div class="container record">
         <h1>最近搜索</h1>
         <ul class="recordul">
-            <li class="whiteli">星巴克</li>
+            <li class="whiteli" onclick="searchinbox()">星巴克</li>
         </ul>
         <h1>热门搜索</h1>
-        <ul class="recordul">
-            <li class="whiteli">方所书店</li>
+        <ul class="recordul hotrecord">
         </ul>
     </div>
     <div class="container thinksearch">
@@ -92,14 +91,10 @@
 </div>
 <div class="navigationbar">
     <ul>
-        <li><img src="images/icon/yellowfound.png" class="found"/>
-            <p id="yellowchar">发现</p></li>
-        <li><img src="images/icon/classify.png" class="classify"/>
-            <p>分类</p></li>
-        <li><img src="images/icon/gotogo.png" class="gotogo"/>
-            <p>导航</p></li>
-        <li><img src="images/icon/park.png" class="park"/>
-            <p>停车</p></li>
+        <li><img src="images/icon/yellowfound.png"  class="found"/><p id="yellowchar">首页</p></li>
+        <li><img src="images/icon/gotogo.png" class="gotogo"/><p>室内导航</p></li>
+        <li><img src="images/icon/park.png" class="park"/><p>反向寻车</p></li>
+        <li><img src="images/icon/classify.png" class="classify" onclick="location.href='classifystore.html'"/><p>业态分类</p></li>
     </ul>
 </div>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -145,7 +140,7 @@
 <!-- build:js scripts/main.js -->
 <script src="scripts/main.js"></script>
 <script src="scripts/port.js"></script>
-<script src="scripts/details.js"></script>
+<script src="scripts/search.js"></script>
 <!-- endbuild -->
 </body>
 </html>

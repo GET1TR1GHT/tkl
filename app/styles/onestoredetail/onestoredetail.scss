@@ -16,55 +16,88 @@
 .map{
   width: 100%;
   height:570px;
-  background-color: #ccc;
+  background-color: #afafaf;
   margin-top: 40px;
   z-index: -1;
 }
 .storemessage{
+  transform: translate(0px, 0px);
+  transition-delay: 0.1s;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
   height: 185px;
   width: 100%;
   background-color: #fff;
   position: absolute;
   bottom: 49px;
   padding-top:15px ;
+  //.closel{
+  //  position: absolute;
+  //  top: 15px;
+  //  right: 15px;
+  //  z-index: 999999;
+  //  img{
+  //    width: 17px;
+  //  }
+  //}
+  #closed{
+    position: absolute;
+    top: -65px;
+    transition-delay: 0.1s;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    background-color: #2c2c2c;
+    box-shadow: 0px 0px 7px #2c2c2c;
+    animation: myfirst 3s infinite;
+    z-index: 9999;
+    img{
+      width: 21px;
+    }
+  }
+  @keyframes myfirst {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    50% {
+      transform: translate(0px, -8px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
   .gotow{
     background-color: black;
-    width:50px;
-    height: 50px;
+    width:35px;
+    height: 35px;
     border-radius: 30px;
     position: absolute;
     right: 5px;
-    top: -24px;
+    top: -20px;
     z-index: 99999;
-    border: 3px solid #C0C0C0;
+    box-shadow: 0px 0px 7px #000;
     img{
-      width: 15px;
+      width: 24px;
       margin: 0 auto;
       display: block;
       margin-top: 7px;
       margin-bottom: 4px;
     }
-    h1{
-      color: #fff;
-      font-weight: 100;
-      text-align: center;
-      font-size: 12px;
-    }
   }
   .storemessageprime{
-    height: 124px;
+    height: 130px;
     width: 100%;
     margin-bottom: 15px;
+    overflow: hidden;
     .primeleft{
       width: 40%;
       float: left;
       .primelogo{
-        width: 123px;
-        height: 123px;
+        width: 129px;
+        height: 129px;
         border-radius: 4px;
         position: relative;
         img{
-          width: 123px;
+          width: 129px;
           position: absolute;
           top: 0;
           left: 0;
@@ -78,7 +111,7 @@
       width: 60%;
       float: right;
       h1{
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 300;
         margin-bottom: 5px;
         text-transform: capitalize;
@@ -87,46 +120,70 @@
         white-space: nowrap;
         width: 95%;
         text-overflow: ellipsis;
-        height: 26px;
-        line-height: 26px;
+        height: 24px;
+        line-height: 24px;
       }
-      h2{
+      h2,h4{
         font-size: 12px;
         font-weight: 300;
-        margin-bottom: 15px;
-      }
-      .messagerow{
-        clear: both;
         margin-bottom: 10px;
+        float: left;
         img{
-          width:16px;
-          height: 16px;
+          width: 16px;
           float: left;
-          margin-right: 8px;
-        }
-        h3{
-          font-size: 14px;
-          font-weight: 300;
-          line-height: 17px;
-          letter-spacing: 1px;
+          margin-right: 5px;
         }
       }
-      .messagerow:nth-of-type(2){
-       margin-bottom: 0;
+      h2{
+        margin-right: 5px;
+      }
+      .charh3{
+        clear: both;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        height: 70px;
+        -webkit-overflow-scrolling: touch;
+        .messagerow{
+          clear: both;
+          margin-bottom: 5px;
+          img{
+            width:14px;
+            height: 14px;
+            float: left;
+            margin-right: 8px;
+          }
+          h3{
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 17px;
+            letter-spacing: 1px;
+          }
+          h3:first-child{
+            float: left;
+          }
+        }
+        .messagerow:nth-of-type(2){
+          margin-bottom: 0;
+        }
+      }
+      .charh3::-webkit-scrollbar {
+        display: none;
       }
     }
   }
   .storemessagerest{
+    position: relative;
     .restleft{
       width: 40%;
       float: left;
       img{
-        width: 13px;
+        width: 10px;
         float: left;
-        margin-right: 6px;
+        margin-right: 3px;
+        padding-top: 2px;
       }
       h1{
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 300;
         line-height:18px ;
       }
@@ -139,12 +196,13 @@
           float: left;
           width: 25%;
           img{
-            width: 16px;
+            width: 15px;
             float: left;
           }
           h4{
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 300;
+            line-height: 16px;
            float: right;
           }
         }
@@ -164,7 +222,7 @@
   background-color: black;
   position: fixed;
   bottom: 0;
-  z-index: 999999999999;
+  z-index: 999999999;
   ul{
     li{
       float: left;
@@ -174,25 +232,13 @@
       img{
         position: absolute;
         top: 5px;
+        width: 19px;
         left: 0;
         right: 0;
         margin: auto;
       }
-      .found{
-        width: 28px;
-        top: 10px;
-      }
       #yellowchar{
         color: #E4C260;
-      }
-      .classify{
-        width: 22px;
-      }
-      .gotogo{
-        width: 19px;
-      }
-      .park{
-        width: 19px;
       }
       p{
         position: absolute;

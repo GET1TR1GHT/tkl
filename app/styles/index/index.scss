@@ -1,7 +1,54 @@
+html {
+  max-width: 500px;
+}
+
 body {
   background-color: #F3F4F6;
-  max-width:500px;
   //margin: 0 auto;
+}
+#storecircle{
+  z-index: 9999999;
+  background-color: #F3F4F6;
+}
+.circle-animation {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999999999999999999999999999;
+  //position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  .cieclestatic{
+    width: 53px;
+    height: 53px;
+  }
+  .circle {
+    width: 53px;
+    height: 53px;
+    animation: circlef 1s infinite;
+  }
+  @keyframes circlef {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .tkllogoyellow {
+    width: 45px;
+  }
 }
 
 .header {
@@ -42,7 +89,7 @@ body {
       line-height: 30px;
       font-weight: 200;
     }
-    .serchlogo{
+    .serchlogo {
       position: absolute;
       width: 19px;
       right: 10px;
@@ -52,18 +99,19 @@ body {
     }
   }
 }
-.whiteblock{
+
+.whiteblock {
   position: fixed;
   top: 40px;
   left: 0;
   right: 40px;
   width: 100%;
-  height: 700px;
+  height: 900px;
   background-color: #fff;
   z-index: 999999;
   display: none;
-  .record{
-    h1{
+  .record {
+    h1 {
       font-size: 16px;
       font-weight: 600;
       height: 35px;
@@ -71,10 +119,10 @@ body {
       margin-bottom: 10px;
       clear: both;
     }
-    .recordul{
+    .recordul {
       width: 100%;
       margin-bottom: 10px;
-      li{
+      li {
         width: 25%;
         padding: 0 10px;
         height: 40px;
@@ -95,10 +143,10 @@ body {
       }
     }
   }
-  .thinksearch{
-    .thinksearchul{
+  .thinksearch {
+    .thinksearchul {
       width: 100%;
-      li{
+      li {
         height: 35px;
         line-height: 35px;
         border-bottom: 1px solid #dadada;
@@ -106,6 +154,7 @@ body {
     }
   }
 }
+
 .banner {
   padding-top: 40px;
   width: 100%;
@@ -150,7 +199,7 @@ body {
   }
   .imgnum {
     position: absolute;
-    bottom:18%;
+    bottom: 18%;
     left: 50%;
     z-index: 999;
     width: 50px;
@@ -178,7 +227,7 @@ body {
       }
     }
   }
-  .detail{
+  .detail {
     font-size: 16px;
     padding: 0 15px;
     font-weight: 700;
@@ -200,16 +249,7 @@ body {
       float: left;
       margin-bottom: 5px;
       position: relative;
-      img {
-        height: 50px;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
-      }
+      box-shadow: 0px 0px 4px #d6d6d6;
     }
     li:first-child, li:nth-of-type(3) {
       margin-right: 2%;
@@ -403,6 +443,37 @@ body {
     overflow: hidden;
     position: relative;
     box-shadow: 0px 0px 6px #d6d6d6;
+    .gotow {
+      background-color: rgba(115, 115, 115, 0.8);
+      width: 35px;
+      height: 35px;
+      border-radius: 30px;
+      position: absolute;
+      left: 10px;
+      top: 160px;
+      z-index: 99999;
+      box-shadow: 0px 0px 7px rgba(115, 115, 115, 1);
+      animation: myfirst 2s infinite;
+      img {
+        width: 24px;
+        margin: 0 auto;
+        display: block;
+        margin-top: 7px;
+        margin-bottom: 4px;
+      }
+      @keyframes myfirst {
+        0% {
+          transform: translate(0px, 0px);
+
+        }
+        50% {
+          transform: translate(0px, -8px);
+        }
+        100% {
+          transform: translate(0px, 0px);
+        }
+      }
+    }
     ul {
       position: relative;
       height: 220px;
@@ -564,15 +635,17 @@ body {
     z-index: -1;
   }
 }
-#reminder{
-margin-top: 70px;
+
+#reminder {
+  margin-top: 70px;
 }
+
 @media screen and (max-width: 376px) {
   .newstore {
     .stores {
       ul {
         height: 200px;
-        li{
+        li {
           height: 200px;
         }
       }

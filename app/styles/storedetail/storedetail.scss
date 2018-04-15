@@ -21,15 +21,27 @@
     .uloptions {
       height: 30px;
       line-height: 30px;
+      .searchwhtie {
+        float: left;
+        width: 16%;
+        height: 30px;
+        padding-top: 7px;
+        img {
+          height: 16px;
+          float: right;
+        }
+      }
       .primeoption {
         float: left;
-        width: 30%;
+        width: 28%;
         //position: relative;
         padding-left: 23px;
         display: inline-block;
-        .dropdown{
+        .dropdown {
           position: relative;
           width: 100%;
+          transition-delay: 0.5s;
+          transition-duration: 0.6s;
           p {
             font-size: 15px;
             font-weight: 200;
@@ -47,7 +59,10 @@
         }
         .restul {
           min-height: 80px;
-          overflow: hidden;
+          max-height: 250px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          -webkit-overflow-scrolling: touch;
           width: 100%;
           background-color: #fff;
           position: absolute;
@@ -55,20 +70,21 @@
           left: 0;
           right: 0;
           box-shadow: 0px 0px 3px #2E2E2E;
+          z-index: 999;
           display: none;
           .restli {
             padding: 5px 0;
             margin: 0 10px;
-            border-bottom: 0.5px solid rgba(218,218,218,1);
+            border-bottom: 0.5px solid rgba(218, 218, 218, 1);
             color: #808080;
           }
           .restli:link {
             color: #D8BB81;
           }
-          .restli:hover{
+          .restli:hover {
             color: #D8BB81;
           }
-          .restli:visited{
+          .restli:visited {
             color: #D8BB81;
           }
           .restli:last-child {
@@ -90,6 +106,15 @@
     }
   }
 }
+
+.youyueli {
+  width: 100%;
+  margin-top: 40px;
+  img {
+    width: 100%;
+  }
+}
+
 .storesdetails {
   .datails {
     .datailsul {
@@ -104,17 +129,23 @@
         display: block;
         padding-bottom: 10px;
         padding-top: 10px;
-        height: 114px;
-        margin-bottom: 10px;
+        min-height: 114px;
+        margin-bottom: 100px;
+        opacity: 0;
         overflow: hidden;
         position: relative;
+        transition-delay: 0.1s;
+        transition-duration: 0.6s;
         .detailleft {
           float: left;
           width: 70%;
+          position: relative;
+          min-height: 90px;
+          overflow: hidden;
           h1 {
             font-size: 18px;
             font-weight: 200;
-            margin-bottom: 18px;
+            margin-bottom: 10px;
             text-transform: capitalize;
             overflow-x: hidden;
             overflow-y: auto;
@@ -125,19 +156,41 @@
             line-height: 22px;
           }
           h2 {
-            font-size: 14px;
-            font-weight: 900;
-            margin-bottom: 18px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 7px;
+            line-height: 16px;
+            display: block;
+            color: grey;
+            span {
+              border: 1px solid #D8BB81;
+              border-radius: 2px;
+              color: #D8BB81;
+              height: 15px;
+              width: 15px;
+              text-align: center;
+              line-height: 14px;
+              display: block;
+              float: left;
+              margin-right: 3px;
+            }
+            .vipspan {
+              width: 21px;
+            }
+          }
+          .dian{
+            min-height: 14px;
           }
           .detailleftbottom {
             height: 17px;
             p {
               font-size: 12px;
               font-weight: 200;
-              float: left;
+              //float: left;
               line-height: 17px;
               margin-right: 5px;
-              width: 125px;
+              //width: 125px;
+              margin-bottom: 7px;
             }
             img {
               float: left;
@@ -178,9 +231,9 @@
           width: 30%;
           float: right;
           position: relative;
-          height: 89px;
+          height: 94px;
           img {
-            width: 90px;
+            width: 94px;
             position: absolute;
             top: 0;
             bottom: 0;
@@ -212,13 +265,13 @@
     }
     .datailsul::-webkit-scrollbar {
       display: none;
-      width:0;
-      height:0;
+      width: 0;
+      height: 0;
     }
   }
   .datails::-webkit-scrollbar {
     display: none;
-    width:0;
-    height:0;
+    width: 0;
+    height: 0;
   }
 }

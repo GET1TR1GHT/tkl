@@ -1,10 +1,9 @@
-<!doctype html>
+<!doctype html >
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="Access-Control-Allow-Origin">
     <title>成都远洋太古里</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -28,6 +27,11 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+    <div class="circle-animation homecircle">
+      <img src="images/icon/cieclestatic.png" class="cieclestatic"/>
+      <img src="images/icon/circle.png"  class="circle"/>
+      <img src="images/icon/tkllogoyellow.png" class="tkllogoyellow"/>
+    </div>
     <div class="header">
       <div class="container">
         <div class="headerlogo"><img class="imginlogo" src="images/icon/tkllogo.png"/></div>
@@ -72,16 +76,12 @@
       <div class="container-fluid">
         <ul class="navigationbox">
           <li class="food" onclick="moveto()">
-            <img src="images/icon/food.png"/>
           </li>
           <li class="shop" onclick="movetoshop()">
-            <img src="images/icon/shop.png"/>
           </li>
           <li class="fun" onclick="movetofun()">
-            <img src="images/icon/fun.png"/>
           </li>
           <li class="public" onclick="movetoserve()">
-            <img src="images/icon/public.png"/>
           </li>
         </ul>
       </div>
@@ -189,6 +189,9 @@
           <p>新店开业</p>
         </div>
         <div class="stores">
+          <div class="gotow">
+            <img src="images/icon/go.png"/>
+          </div>
           <ul id="storesdetails" class="storedetail">
             <li class="shownews" data-id="1"></li>
             <li data-id="2"></li>
@@ -218,11 +221,11 @@
         <div class="headline">
           <div class="headlinebox"></div>
           <p>预付卡店铺</p>
-          <a href="###">
+          <a onclick="movebookingto()"  href="###">
             <h4>查看全部</h4>
           </a>
         </div>
-        <div class="prepayimg">
+        <div class="prepayimg" onclick="movebookingto()" >
           <img src="images/image/yufu.png"/>
         </div>
       </div>
@@ -233,11 +236,11 @@
         <div class="headline">
           <div class="headlinebox"></div>
           <p>"优悦里"会员</p>
-          <a href="###">
+          <a onclick="moveallto()" href="#">
             <h4>查看全部</h4>
           </a>
         </div>
-        <div class="prepayimg">
+        <div class="prepayimg" onclick="moveallto()">
           <img src="images/image/vip.jpeg"/>
         </div>
       </div>
@@ -252,10 +255,10 @@
 
     <div class="navigationbar">
       <ul>
-        <li><img src="images/icon/yellowfound.png"  class="found"/><p id="yellowchar">首页</p></li>
-        <li><img src="images/icon/gotogo.png" class="gotogo"/><p>室内导航</p></li>
-        <li><img src="images/icon/park.png" class="park"/><p>反向寻车</p></li>
-        <li><img src="images/icon/classify.png"class="classify"/><p>业态分类</p></li>
+        <li><img src="images/icon/yellowfound.png"  onclick="location.href='index.html'" class="found"/><p id="yellowchar">首页</p></li>
+        <li><img src="images/icon/gotogo.png" class="gotogo" onclick="location.href='onestoredetail.html'"/><p>室内导航</p></li>
+        <li><img src="images/icon/park.png" onclick="location.href='findcar.html'" class="park"/><p>反向寻车</p></li>
+        <li><img src="images/icon/classify.png" class="classify" onclick="location.href='classifystore.html'"/><p>业态分类</p></li>
       </ul>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -293,6 +296,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <script src="scripts/port.js"></script>
+    <script src="scripts/search.js"></script>
     <!-- endbuild -->
   </body>
 </html>
