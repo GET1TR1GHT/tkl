@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <title>成都远洋太古里</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="overview & stats">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="viewport"
+          content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,width=device-width">
+    <!--<link rel="stylesheet" href="//cdn.amazeui.org/amazeui/2.4.2/css/amazeui.min.css">-->
+    <link href="//oex38ct5y.qnssl.com/common/libs/amazeui/2.4.2/css/amazeui.min.css" rel="stylesheet">
+    <!-- 加载速度略慢于上面的CDN,但支持https. -->
+    <link href="//oex38ct5y.qnssl.com/wx/weui/weui.min.css" rel="stylesheet">
+    <!-- common -->
+    <!--<link href="/build/css/styles3.css" rel="stylesheet">-->
+    <!--<link href="//oex38ct5y.qnssl.com/common/css/style-84f4825f75.min.css" rel="stylesheet">-->
+    <!-- taikooLi -->
+    <link href="tgl/css/styles3.css" rel="stylesheet">
+    <!--<link href="//oex38ct5y.qnssl.com/tgl/css/style-b896fe2e28.min.css" rel="stylesheet">-->
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="tgl/css/refine.css" rel="stylesheet">
+
+    <script>
+        // 百度统计
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?579857ae08de80a40c8a431fd9e0b8fd";
+            var s = document.getElementsByTagName("head")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body class="white"> <!-- 默认使用白色的主体,可以避免开始时顶部菜单为粉红色 -->
+<section id="body">
+    <!--<header data-am-widget="header" class="am-header am-header-default am-no-layout" id="header">-->
+    <!--&lt;!&ndash; 停车场顶部提示 &ndash;&gt;-->
+    <!--<div class="top-tips-box dn" id="js_top_tips_box">-->
+    <!--<i class="icon-warn weui-icon-warn">!</i>-->
+    <!--<p class="top-tips">请输入车位编号找车（如3E270或270）</p>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 顶部搜索框 &ndash;&gt;-->
+    <!--<div class="" id="searchTop">-->
+    <!--<input type="text" name="name" value="" id="search">-->
+    <!--</div>-->
+    <!--<nav data-am-widget="menu" class="am-menu am-menu-dropdown2 am-no-layout" id="js_dropdown_nav_box">-->
+    <!--&lt;!&ndash; 触发下拉菜单按钮 &ndash;&gt;-->
+    <!--<a class="am-menu-toggle" href="javascript:;" data-maction="showNav">-->
+    <!--<i class="am-menu-toggle-icon am-icon-th-list"></i>-->
+    <!--</a>-->
+    <!--&lt;!&ndash; 下拉菜单容器 &ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="am-menu-nav am-avg-sm-4 am-collapse initial am-in" id="js_dropdown_menu_container">&ndash;&gt;-->
+    <!--&lt;!&ndash;<div class="am-slider am-slider-a1" id="slideNav"></div>&ndash;&gt;-->
+    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+    <!--</nav>-->
+    <!--</header>-->
+
+    <div class="header">
+        <div class="container">
+            <div class="headerlogo"><img class="imginlogo" src="images/icon/tkllogo.png"/></div>
+            <form class="searchdiv" action="#">
+                <input class="search" type="search" placeholder="搜索店铺、公共设施" onsearch="search()" id="searchstorename">
+                <img class="serchlogo" src="images/icon/search.png" onclick="search()"/>
+            </form>
+        </div>
+    </div>
+
+    <div class="whiteblock">
+        <div class="container record">
+            <h1>最近搜索</h1>
+            <ul class="recordul">
+                <li class="whiteli" onclick="searchinbox()">星巴克</li>
+            </ul>
+            <h1>热门搜索</h1>
+            <ul class="recordul hotrecord">
+            </ul>
+        </div>
+        <div class="container thinksearch">
+            <ul class="thinksearchul"></ul>
+        </div>
+    </div>
+
+
+    <!-- Left-Top-Box: 推荐店铺 -->
+    <!--<div class="eleColumn dn" id="eleColumn">-->
+    <!--<div class="titleContain dn" id="js_rec_stores_menu_wrp">-->
+    <!--<a class="ico" id="reColumn" href="javascript:;"></a>-->
+    <!--</div>-->
+    <!--</div>-->
+
+    <!--<div class="menu-box left-top-box db" id="js_left_top_box">-->
+    <!--&lt;!&ndash; Buttons: 按钮列表 &ndash;&gt;-->
+    <!--<section class="toggle-buttons">-->
+    <!--&lt;!&ndash; 触发展开/收起推荐店铺列表按钮 &ndash;&gt;-->
+    <!--<span class="ico-toggle-stores recommend dn" id="js_toggle_recommend_stores"></span>-->
+    <!--&lt;!&ndash; 触发展开/收起收藏列表按钮 &ndash;&gt;-->
+    <!--&lt;!&ndash;<span class="ico-toggle-stores favorite-list" id="js_toggle_favorite_list"></span>&ndash;&gt;-->
+    <!--</section>-->
+    <!--<section class="store-list-category">-->
+    <!--&lt;!&ndash; 推荐店铺列表 &ndash;&gt;-->
+    <!--<div class="store-list-wrp recommend-stores-wrp" id="js_recommend_store_list_wrp">-->
+    <!--<div class="ico-cls-stores-wrp">-->
+    <!--<span class="stores-category">推荐店铺(共<span class="stores-cnt"></span>家)</span>-->
+    <!--<span class="ico-cls-stores" id="js_close_recommend_store_list"></span>-->
+    <!--</div>-->
+    <!--<ul class="store-list" id="js_recommend_store_list"></ul>-->
+    <!--<div class="ico-cls-stores-wrp btm"></div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--</div>-->
+
+    <!-- Right-Top-box: 储值卡店铺、会员优惠店铺 -->
+    <!--<div class="menu-box right-top-box" id="js_right_top_box">-->
+    <!--&lt;!&ndash; Buttons: 按钮列表 &ndash;&gt;-->
+    <!--<section class="toggle-buttons">-->
+    <!--&lt;!&ndash; 触发展开/收起预付卡店铺列表按钮 &ndash;&gt;-->
+    <!--<a class="ico-toggle-stores stored-value-card" id="js_toggle_pre_pay_card_stores"></a>-->
+    <!--&lt;!&ndash; 触发展开/收起会员优惠店铺列表按钮 &ndash;&gt;-->
+    <!--<a class="ico-toggle-stores vip-discount" id="js_toggle_vip_discount_stores"></a>-->
+    <!--</section>-->
+    <!--&lt;!&ndash; Stores: 各类型的店铺列表 &ndash;&gt;-->
+    <!--<section class="store-list-category">-->
+    <!--&lt;!&ndash; 预付卡店铺列表 &ndash;&gt;-->
+    <!--<div class="store-list-wrp stored-value-card-stores-wrp" id="js_pre_pay_card_store_list_wrp">-->
+    <!--<div class="ico-cls-stores-wrp">-->
+    <!--<span class="stores-category">预付卡店铺(共<span class="stores-cnt"></span>家)</span>-->
+    <!--<span class="ico-cls-stores" id="js_close_pre_pay_card_store_list"></span>-->
+    <!--</div>-->
+    <!--<ul class="store-list" id="js_pre_pay_card_store_list"></ul>-->
+    <!--<div class="ico-cls-stores-wrp btm"></div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; 会员优惠店铺列表 &ndash;&gt;-->
+    <!--<div class="store-list-wrp vip-discount-stores-wrp" id="js_vip_discount_store_list_wrp">-->
+    <!--<div class="ico-cls-stores-wrp">-->
+    <!--<span class="stores-category">会员优惠店铺(共<span class="stores-cnt"></span>家)</span>-->
+    <!--<span class="ico-cls-stores" id="js_close_vip_discount_store_list"></span>-->
+    <!--</div>-->
+    <!--<ul class="store-list" id="js_vip_discount_store_list"></ul>-->
+    <!--<div class="ico-cls-stores-wrp btm"></div>-->
+    <!--</div>-->
+    <!--</section>-->
+    <!--</div>-->
+
+    <div id="myMaps"></div>
+
+    <iframe name='hidden_frame' id="hidden_frame" style="display:none"></iframe>
+    <div class="ctrl-btn2 hoverBox"></div>
+
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd color-dark h2">确认停车</div>
+            <div class="am-modal-bd">
+                小主，检测到您已有停车记录，确认使用新的停车记录吗？
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-cancel>不，保留原记录</span>
+                <span class="am-modal-btn" data-am-modal-confirm data-maction="record-car">使用新记录</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="am-modal am-modal-confirm" tabindex="-1" id="take-me">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd color-dark h2"></div>
+            <div class="am-modal-bd">
+                卡券已存入您的个人帐号，您可以在个人中心里查看和使用！
+            </div>
+            <div class="am-modal-footer">
+                <span class="am-modal-btn" data-am-modal-confirm data-maction="take-me">带我去</span>
+                <span class="am-modal-btn" data-am-modal-cancel>退出</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="text"></div>
+    <div class="" id="btm">
+        <div id="floor-bottom">
+            <div class="floor_change_box">
+                <div style="" class="rtmap_floor_change_list">
+                    <div class="top_angle topAngle">
+                        <i class="am-icon-chevron-up"></i>
+                    </div>
+                    <div class="list_scroll">
+                        <ul class="floor_list">
+                        </ul>
+                    </div>
+                    <div class="bottom_angle bottomAngle">
+                        <i class="am-icon-chevron-down"></i>
+                    </div>
+                </div>
+                <div class="rtmap_floor_btn">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <div id="if_share" data-maction="hiddenShare"></div>
+</section>
+
+<div id='debugLog' class="am-hide"></div>
+<div id="debugScript" class="am-hide">
+    <textarea class="debug-script-code"></textarea>
+    <a class="debug-script-run" href="javascript:;" data-maction="run-debug-js">运行</a>
+</div>
+
+<div class="navigationbar">
+    <ul>
+        <li><img src="images/icon/found.png" class="found" onclick="location.href='index.html'"/>
+            <p>首页</p></li>
+        <li><img src="images/icon/yellowgotogo.png" class="gotogo"/>
+            <p id="yellowchar">室内导航</p></li>
+        <li><img src="images/icon/park.png" onclick="location.href='findcarstore.html'" class="park"/>
+            <p>反向寻车</p></li>
+        <li><img src="images/icon/classify.png" class="classify" onclick="location.href='classifystore.html'"/>
+            <p>业态分类</p></li>
+    </ul>
+</div>
+
+
+<script src="//res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+
+<script src="//oex38ct5y.qnssl.com/js/hammer.min.js"></script>
+<script src="//oex38ct5y.qnssl.com/js/hammer-time.min.js"></script>
+
+<script src="//oex38ct5y.qnssl.com/snap.svg.js"></script>
+
+<script src="//oex38ct5y.qnssl.com/common/js/log-0.0.4.min.js"></script>                        <!-- console log 模块 -->
+<script src="//oex38ct5y.qnssl.com/wx/weui/weui.min.js"></script>
+<!-- common -->
+<!--<script src="/build/js/bundle.js"></script>-->
+
+<!-- taikooLi -->
+<script src="tgl/js/bundle.js"></script>
+<script src="scripts/main.js"></script>
+<script src="tgl/js/refine.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<!--<script src="//oex38ct5y.qnssl.com/tgl/js/bundle-f108b110d0.js"></script>-->
+<!--<script src="//oex38ct5y.qnssl.com/tgl/js/bundle-c1f0bccaf1.js"></script>-->
+<!--<script>-->
+<!--var scriptNode = document.createElement('script');-->
+<!--scriptNode.src = '//172.16.12.219:8088/build/tgl/js/bundle.js?t=' + Date.now();-->
+<!--document.getElementsByTagName('body')[0].appendChild(scriptNode);-->
+<!--</script>-->
+
+<!-- weinre 调试 -->
+<!--<script type="text/javascript" src="http://172.16.12.219:8081/target/target-script-min.js#anonymous"></script>-->
+</body>
+</html>
