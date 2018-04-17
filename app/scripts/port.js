@@ -38,7 +38,6 @@ $(document).ready(function () {
             $('#hotstoreul>li').each(function (a, b) {
                 hotstoreimg.eq(a).attr('src', 'http://idp.dev2.wizarcan.com' + res.data[a].icon);
                 hotstorename.eq(a).html(res.data[a].brand.replace('#', '  '));
-                $('#hotstoreul>li').eq(a).attr('onclick', 'javascrtpt:window.location.href="onestoredetail.html?storedesignation='+ res.data[a].brand +'"');
             })
         },
         error: function (res) {

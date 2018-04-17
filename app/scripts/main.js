@@ -144,7 +144,7 @@ $(document).ready(function () {
                                 console.log(guu[a])
                                 for (var i = 0; i < index2 + 1; i++) {
                                     if (typeof(res.data[a].detail) != 'undefined') {
-                                        $('.datailsul').append('<li class="container storelist" onclick="javascrtpt:window.location.href=\'onestoredetail.html?storedesignation='+res.data[a].brand+'\'">' +
+                                        $('.datailsul').append('<li class="container storelist" >' +
                                             '                    <div class="detailleft">' +
                                             '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
                                             '                        <h2 class="dian">' + (res.data[a].discountInfo == '' || (typeof (res.data[a].discountInfo) == 'undefined') ? '' : '<span>店</span>' + res.data[a].discountInfo) + '</h2> <h2 class="viph2">' + (res.data[a].memberOffer == '' || (typeof (res.data[a].memberOffer) == 'undefined') ? '' : '<span class="vipspan">VIP</span>' + res.data[a].memberOffer) + '</h2>' +
@@ -168,7 +168,7 @@ $(document).ready(function () {
                                                 '                    </div>') +
                                             '                </li>')
                                     } else {
-                                        $('.datailsul').append('<li class="container storelist" onclick="javascrtpt:window.location.href=\'onestoredetail.html?storedesignation='+res.data[a].brand+'\'">' +
+                                        $('.datailsul').append('<li class="container storelist" >' +
                                             '                    <div class="detailleft">' +
                                             '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
                                             '                        <h2>' + '公共设施' + '</h2>' +
@@ -222,42 +222,42 @@ $(document).ready(function () {
         })
     }
 
-    if (urll.indexOf('storedesignation') != -1) {
-        var name = urll.split('?')[1];
-        var name1 = name.split('=')[1];
-        var name2 = decodeURIComponent(name1).replace('&amp;', '&');
-        $.ajax({
-            method: 'get',
-            url: 'http://idp.dev2.wizarcan.com/client/getPoiByWhere.shtml?buildingId=33',
-            buildingId: 'true',
-            dataType: 'json',
-            success: function (res) {
-                console.log(res.data)
-                $.each(res.data, function (c, d) {
-                    if (res.data[c].comment.toLowerCase().replace('#', '').indexOf(name2.toLowerCase().replace('#', '')) != -1) {
-                        $('.primelogo>img').attr('src',(typeof(res.data[c].icon) == 'undefined' ? 'images/icon/Rectangle.png' : 'http://idp.dev2.wizarcan.com/' + res.data[c].icon))
-                        $('.primename').html(res.data[c].brand);
-                        $('.telhref').attr('href','tel:' +res.data[c].phoneNumber);
-                        $('.restleft>h1').html(res.data[c].address.substr(0,9));
-                        $('.classify_store').html(res.data[c].detail);
-                        $('.booking_store').html(((res.data[c].serviceLabels[3]) == '0' ? '' : '预付卡店铺'));
-                        // $('.charh3').html(((res.data[c].discountInfo != '') || (typeof (res.data[c].discountInfo) != 'undefined') ?  :'' )+
-                        //     ((res.data[c].memberOffer != '' )|| (typeof (res.data[c].memberOffer) != 'undefined') ?  '<div class="messagerow"><img src="images/icon/vipsmall.png"/><h3>会员优惠</h3><h3 class="vipin">'+ res.data[c].memberOffer+'</h3></div>' :''));
-                        // console.log((res.data[c].discountInfo != '' || (typeof (res.data[c].discountInfo) != 'undefined')?'y':'n'));
-
-                        if((res.data[c].discountInfo != '') &&(typeof (res.data[c].discountInfo) != 'undefined')){
-                            $('.onegift_store').append('<img src="images/icon/giftsmall.png"/><h3>店铺优惠</h3><h3 class="ativesin">'+ res.data[c].discountInfo +'</h3>')
-                        }
-
-                        if((res.data[c].memberOffer != '')  (typeof (res.data[c].memberOffer) != 'undefined')){
-                            $('.onevip_store').append('<img src="images/icon/vipsmall.png"/><h3>会员优惠</h3><h3 class="vipin">'+ res.data[c].memberOffer +'</h3>')
-                        }
-                        $('.gotostorehome').attr('onclick','javascrtpt:window.location.href="' + res.data[c].url + '"');
-                    }
-                })
-            }
-        })
-    }
+    // if (urll.indexOf('storedesignation') != -1) {
+    //     var name = urll.split('?')[1];
+    //     var name1 = name.split('=')[1];
+    //     var name2 = decodeURIComponent(name1).replace('&amp;', '&');
+    //     $.ajax({
+    //         method: 'get',
+    //         url: 'http://idp.dev2.wizarcan.com/client/getPoiByWhere.shtml?buildingId=33',
+    //         buildingId: 'true',
+    //         dataType: 'json',
+    //         success: function (res) {
+    //             console.log(res.data)
+    //             $.each(res.data, function (c, d) {
+    //                 if (res.data[c].comment.toLowerCase().replace('#', '').indexOf(name2.toLowerCase().replace('#', '')) != -1) {
+    //                     $('.primelogo>img').attr('src',(typeof(res.data[c].icon) == 'undefined' ? 'images/icon/Rectangle.png' : 'http://idp.dev2.wizarcan.com/' + res.data[c].icon))
+    //                     $('.primename').html(res.data[c].brand);
+    //                     $('.telhref').attr('href','tel:' +res.data[c].phoneNumber);
+    //                     $('.restleft>h1').html(res.data[c].address.substr(0,9));
+    //                     $('.classify_store').html(res.data[c].detail);
+    //                     $('.booking_store').html(((res.data[c].serviceLabels[3]) == '0' ? '' : '预付卡店铺'));
+    //                     // $('.charh3').html(((res.data[c].discountInfo != '') || (typeof (res.data[c].discountInfo) != 'undefined') ?  :'' )+
+    //                     //     ((res.data[c].memberOffer != '' )|| (typeof (res.data[c].memberOffer) != 'undefined') ?  '<div class="messagerow"><img src="images/icon/vipsmall.png"/><h3>会员优惠</h3><h3 class="vipin">'+ res.data[c].memberOffer+'</h3></div>' :''));
+    //                     // console.log((res.data[c].discountInfo != '' || (typeof (res.data[c].discountInfo) != 'undefined')?'y':'n'));
+    //
+    //                     if((res.data[c].discountInfo != '') &&(typeof (res.data[c].discountInfo) != 'undefined')){
+    //                         $('.onegift_store').append('<img src="images/icon/giftsmall.png"/><h3>店铺优惠</h3><h3 class="ativesin">'+ res.data[c].discountInfo +'</h3>')
+    //                     }
+    //
+    //                     if((res.data[c].memberOffer != '')&&(typeof (res.data[c].memberOffer) != 'undefined')){
+    //                         $('.onevip_store').append('<img src="images/icon/vipsmall.png"/><h3>会员优惠</h3><h3 class="vipin">'+ res.data[c].memberOffer +'</h3>')
+    //                     }
+    //                     $('.gotostorehome').attr('onclick','javascrtpt:window.location.href="' + res.data[c].url + '"');
+    //                 }
+    //             })
+    //         }
+    //     })
+    // }
 
     // 判断首页点击导航栏获得网址的数据，并分析提出type后面的值，区分美食、购物、娱乐、服务；
     function kk() {
@@ -310,7 +310,6 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (res) {
                 var index2 = 0;
-                console.log(res.data)
                 var guu = [];
                 $.each(res.data, function (a, b) {
                     guu.push(res.data[a].typeIds);
@@ -319,7 +318,7 @@ $(document).ready(function () {
                             showlist();
                             for (var i = 0; i < index2 + 1; i++) {
                                 // li数据加载后并插入到ul当中
-                                $('.datailsul').append('<li class="container storelist" onclick="javascrtpt:window.location.href=\'onestoredetail.html?storedesignation='+res.data[a].brand+'\'">' +
+                                $('.datailsul').append('<li class="container storelist" >' +
                                     '                    <div class="detailleft">' +
                                     '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
                                     '                        <h2 class="dian">' + (res.data[a].discountInfo == '' || (typeof (res.data[a].discountInfo) == 'undefined') ? '' : '<span>店</span>' + res.data[a].discountInfo) + '</h2> <h2 class="viph2">' + (res.data[a].memberOffer == '' || (typeof (res.data[a].memberOffer) == 'undefined') ? '' : '<span class="vipspan">VIP</span>' + res.data[a].memberOffer) + '</h2>' +
@@ -351,7 +350,7 @@ $(document).ready(function () {
                                 if (guu[a].indexOf(type4) != -1) {
                                     for (var i = 0; i < index2 + 1; i++) {
                                         // li数据加载后并插入到ul当中
-                                        $('.datailsul').append('<li class="container storelist" onclick="javascrtpt:window.location.href=\'onestoredetail.html?storedesignation='+res.data[a].brand+'\'">' +
+                                        $('.datailsul').append('<li class="container storelist" >' +
                                             '                    <div class="detailleft">' +
                                             '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
                                             '                        <h2 class="dian">' + (res.data[a].discountInfo == '' || (typeof (res.data[a].discountInfo) == 'undefined') ? '' : '<span>店</span>' + res.data[a].discountInfo) + '</h2> <h2 class="viph2">' + (res.data[a].memberOffer == '' || (typeof (res.data[a].memberOffer) == 'undefined') ? '' : '<span class="vipspan">VIP</span>' + res.data[a].memberOffer) + '</h2>' +
@@ -545,7 +544,7 @@ $(document).ready(function () {
                         if (guu[a].indexOf(putchar.substr(0, 2)) != -1) {
                             $('#reminder').css('display', 'none')
                             for (var i = 0; i < index2 + 1; i++) {
-                                $('.datailsul').append('<li class="container storelist" onclick="javascrtpt:window.location.href=\'onestoredetail.html?storedesignation='+res.data[a].brand+'\'">' +
+                                $('.datailsul').append('<li class="container storelist" >' +
                                     '                    <div class="detailleft">' +
                                     '                        <h1>' + res.data[a].brand.replace('#', '  ') + '</h1>' +
                                     '                        <h2 class="dian">' + (res.data[a].discountInfo == '' || (typeof (res.data[a].discountInfo) == 'undefined') ? '' : '<span>店</span>' + res.data[a].discountInfo) + '</h2> <h2 class="viph2">' + (res.data[a].memberOffer == '' || (typeof (res.data[a].memberOffer) == 'undefined') ? '' : '<span class="vipspan">VIP</span>' + res.data[a].memberOffer) + '</h2>' +
